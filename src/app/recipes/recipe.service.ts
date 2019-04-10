@@ -51,5 +51,10 @@ export class RecipeService{
           this.recipesChanged.next(this.recipes);
       }
 
+      setRecipes(rcp:Recipe[]){
+          this.recipes=rcp;
+          this.recipesChanged.next(this.recipes.slice());
+      }
+
 
 }
